@@ -34,7 +34,7 @@ class Avaliacao(Base):
     class meta:
         verbose_name = 'Avaliação'
         verbose_name_plural = 'Avaliações'
-        unique_together = ['email', 'curso']
+        unique_together = ('email', 'curso')
 
     def __str__(self):
         return f'{self.nome} avaliou o curso{self.curso} com nota {self.avaliacao}'
